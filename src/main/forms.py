@@ -9,7 +9,7 @@ class ContactForm(forms.ModelForm):
                     'placeholder': '*Full name..',
                     }))
     email = forms.EmailField(max_length=254, required=True, 
-            widget=forms.TextInput(attrs={
+            widget=forms.EmailInput(attrs={
                     'placeholder': '*Email..',
                     }))
     message = forms.CharField(max_length=1000, required=True, 
