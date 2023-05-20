@@ -67,7 +67,7 @@ Start Content
       <div class="row">
         <div class="col-md-auto">
           <div class="keySkillCol">
-            <h4 class="smTitle pb-3">Key Skills</h4>
+            <h4 class="smTitle pb-3" style="text-decoration: underline">Key Skills</h4>
             {% for sk in me.userprofile.skills.all %}
             {% if sk.is_key_skill %}
             <div class="keySkillCard">
@@ -83,7 +83,7 @@ Start Content
           </div>
         </div>
         <div class="col-md">
-          <h4 class="smTitle pb-3">Coding Skills</h4>
+          <h4 class="smTitle pb-3" style="text-decoration: underline">Coding Skills</h4>
           <div class="progressCol">
             <div class="progressCard">
               {% for sk in me.userprofile.skills.all %}
@@ -187,41 +187,6 @@ Start Content
         {% endif %}
         {% endfor %}
                 
-      </div>
-      <div class="testimonialCol">
-        <h4 class="smText regular d-block">Testimonials</h4>
-        <div class="testimonialSlider">
-          <div class="swiper testimonialSwiper">
-            <div class="swiper-wrapper">
-              {% for t in testimonials %}
-              {% if t.is_active %}
-              <div class="swiper-slide">
-                <div class="testimonialCard">
-                  <div class="row align-items-center">
-                    <div class="col-sm-auto">
-                      <div class="tImgCol">
-                        <img src="{{t.thumbnail.url}}" alt="...">
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="tContentCol">
-                        <h4 class="xsTitle bold">{{t.name}} - {{t.role}}</h4>
-                        <p>{{t.quote}}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endfor %}
-
-            </div>
-            <div class="test-swiper-button-next swiper-button-next swiperBtnStyle"></div>
-            <div class="test-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
-          </div>
-
-
-        </div>
       </div>
     </div>
   </div>

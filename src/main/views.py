@@ -68,3 +68,13 @@ class BlogView(generic.ListView):
 class BlogDetailView(generic.DetailView):
     model = Blog
     template_name = "main/blog-detail.html"
+
+
+#def handler404(request, *args, **argv):
+    #response.status_code = 404
+    #return render(request, '404.html', {})
+
+from django.views.defaults import page_not_found
+
+def handler_404(request, exception):
+    return page_not_found(request, exception, template_name="errors/404.html")

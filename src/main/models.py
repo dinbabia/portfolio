@@ -101,8 +101,8 @@ class Portfolio(models.Model):
     is_active = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.name)
+        #if not self.id:
+        self.slug = slugify(self.name)
         super(Portfolio, self).save(*args, **kwargs)
 
     def __str__(self):
@@ -129,8 +129,8 @@ class Blog(models.Model):
     is_active = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
-        if not self.id:
-            self.slug = slugify(self.name)
+        #if not self.id:
+        self.slug = slugify(self.name)
         super(Blog, self).save(*args, **kwargs)
 
     def __str__(self):

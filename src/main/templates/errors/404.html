@@ -4,9 +4,9 @@
 <!-- ================================
 Start SEO blocks
 ================================= -->
-{% block title %} {{ object.name|title }}{% endblock %}
-{% block decription %}{% endblock %}
-{% block keywords %}{% endblock %}
+{% block title %}Page not Found{% endblock %}
+{% block description %}Homepage of Din Laurence Babia portfolio or Resume{% endblock %}
+{% block keywords %}portfolio,resume,dinbabia,babia{% endblock %}
 <!-- ================================
 END SEO blocks
 ================================= -->
@@ -34,11 +34,10 @@ Start Content
 <section>
   <div class="innerPageBannerCol">
     <div class="container">
-      <div class="row g-4 g-md-3  align-items-center">
-        <div class="col-md-12">
+      <div class="align-items-center">
+        <div class="align-items-center">
           <div class="bannerContent">
-              <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
-              <h1 class="smTitle pb-md-3">- {{ object.description }}</h1>
+            <h1 class="xlTitle pb-md-3">OH NO! The page you requested could NOT BE FOUND. Please <a href="{% url 'main:contact' %}" style="text-decoration: underline;">Contact Me</a> if you have questions.</h1>
           </div>
         </div>
       </div>
@@ -46,14 +45,7 @@ Start Content
   </div>
 </section>
 
-<section>
-  <div class="sectionSpaceSm">
-    <div class="container">
-      {{object.body|safe}}
-    </div>
-  </div>
-</section>
+{% endblock %}
 <!-- ================================
 End Content
 ================================= -->
-{%endblock%}

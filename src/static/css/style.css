@@ -114,6 +114,7 @@ a, .btn {
 }
 .smText {
   font-size: 22px;
+  text-decoration: underline;
 }
 .xsTitle {
   font-size: 18px;
@@ -261,7 +262,7 @@ a, .btn {
 
 /* banner section */
 .bannerSection {
-	padding: 180px 0 80px;
+	padding: 180px 0 40px;
 }
 .bannerUserImg {
   margin-left: 30px;
@@ -518,8 +519,7 @@ body.navToggleActive {
     padding-right: 30px;
   }
 }
-@media (min-width:1200px) {
-  .headerCol .container-fluid {
+@media (min-width:1200px) { .headerCol .container-fluid {
     padding-left: 55px;
     padding-right: 55px;
   }
@@ -557,7 +557,11 @@ body.navToggleActive {
   	padding: 150px 0 100px;
   }
 }
-
+@media (max-width: 800px){
+  .col-md {
+      padding-top: 25px;
+  }
+}
 @media (max-width:991px) {
   .sliderOuter .swiper-button-next.swiperBtnStyle {
     right: -20px;
@@ -609,161 +613,6 @@ body.navToggleActive {
   }
 }
 
-@media (max-width:767px) {
-  .navCollapseCol {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 230px;
-    padding: 20px;
-    background: var(--primaryDarkColor);
-    z-index: 99;
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-transition: all 300ms ease-in-out 0s;
-    -o-transition: all 300ms ease-in-out 0s;
-    transition: all 300ms ease-in-out 0s;
-  }
-  .navToggleActive .navCollapseCol {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-  .navCol {
-  	text-align: left;
-  }
-  .navCol li + li {
-  	padding-left: 0;
-  }
-  .navCol li {
-  	padding: 5px 0;
-  }
-  .navCol li {
-  	display: block;
-  }
-  .navCol a::before {
-    display: none;
-  }
-  .navCol a {
-  	font-size: 16px;
-    color: var(--bs-white);
-  }
-
-  .bannerUserImg {
-  	margin-left: 0;
-  	width: 180px;
-  	height: 180px;
-  }
-  .bannerSection {
-  	padding: 120px 0 50px;
-  }
-  .tImgCol {
-  	margin-right: 0;
-  }
-  .socialCol img {
-  	max-width: 20px;
-  	max-height: 20px;
-  }
-  .socialCol li + li {
-  	padding-left: 20px;
-  }
-  .copyrightCol {
-  	padding: 15px 0 0;
-  	font-size: 12px;
-  }
-  .footerCol {
-  	padding: 20px 0;
-  }
-  .mdTitle {
-  	font-size: 22px;
-  }
-  .lgTitle {
-  	font-size: 24px;
-  }
-  .smText {
-  	font-size: 18px;
-  }
-  .dateLbl {
-  	font-size: 15px;
-  }
-  .sectionSpace {
-  	padding: 50px 0;
-  }
-
-  .portfolioRow .pColMain:nth-child(2n-1) .pCol {
-  	margin-top: 0;
-  }
-  .innerPageBannerCol {
-  	padding: 100px 0 30px;
-  }
-  .navCol a:hover, .navCol a.active {
-  	color: var(--bs-white);
-    opacity: 1;
-  }
-  .navCol a {
-    opacity: 0.8;
-  }
-  .logoCol img {
-  	width: 50px;
-  }
-  .fixedHeader .headerCol,  .headerCol {
-  	padding: 10px 0;
-  }
-}
-
-@media(max-width:575px) {
-  .sliderOuter .swiper-button-prev.swiperBtnStyle ,
-  .sliderOuter .swiper-button-next.swiperBtnStyle {
-    display: none;
-  }
-  .testimonialSlider .swiper-slide {
-  	padding: 0 0px 50px;
-  }
-  .swiperBtnStyle.swiper-button-next {
-  	right: auto;
-  	top: auto;
-  	bottom: 0;
-  	left: 50%;
-  	margin-left: 5px;
-  }
-  .swiperBtnStyle.swiper-button-prev {
-  	left: auto;
-  	top: auto;
-  	bottom: 0;
-  	right: 50%;
-  	margin-right: 5px;
-  }
-  .testimonialSlider {
-  	padding: 10px 0 0;
-  }
-  .sectionSpace {
-  	padding: 40px 0;
-  }
-  .cardStyle1 {
-  	padding: 15px;
-  }
-  .btn {
-  	font-size: 14px;
-  }
-  .xlTitle {
-  	font-size: 26px;
-  }
-  .lgTitle {
-  	font-size: 22px;
-  }
-  .mdTitle {
-  	font-size: 20px;
-  }
-  .swiperBtnStyle {
-  	width: 30px;
-  	height: 30px;
-  }
-  .swiper-button-next.swiperBtnStyle::after, .swiper-button-prev.swiperBtnStyle::after {
-  	font-size: 14px;
-  }
-}
 
 input[type=text], input[type=email], select, textarea {
   width: 100%;
